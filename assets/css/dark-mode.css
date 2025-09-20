@@ -1,0 +1,369 @@
+/* Dark Mode Styles for EthCo Coders Portfolio */
+
+/* Dark Mode Variables */
+:root {
+    --dark-bg-primary: #0a0a0a;
+    --dark-bg-secondary: #1a1a1a;
+    --dark-bg-tertiary: #2a2a2a;
+    --dark-text-primary: #ffffff;
+    --dark-text-secondary: #cccccc;
+    --dark-text-muted: #888888;
+    --dark-border: #333333;
+    --dark-shadow: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 1001;
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-heavy);
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    --white: var(--dark-bg-primary);
+    --light-gray: var(--dark-bg-secondary);
+    --dark-gray: var(--dark-text-primary);
+}
+
+[data-theme="dark"] body {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .header {
+    background-color: rgba(26, 26, 26, 0.95);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .nav-link {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+    color: var(--primary-green);
+}
+
+[data-theme="dark"] .nav-toggle .bar {
+    background-color: var(--dark-text-primary);
+}
+
+/* Hero Section Dark Mode */
+[data-theme="dark"] .hero-overlay {
+    background: linear-gradient(135deg, rgba(34, 139, 34, 0.9), rgba(255, 215, 0, 0.7));
+}
+
+/* Services Section Dark Mode */
+[data-theme="dark"] .services {
+    background-color: var(--dark-bg-secondary);
+}
+
+[data-theme="dark"] .service-card {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .service-card:hover {
+    border-color: var(--primary-green);
+    box-shadow: 0 8px 30px rgba(34, 139, 34, 0.3);
+}
+
+[data-theme="dark"] .service-description {
+    color: var(--dark-text-secondary);
+}
+
+/* Portfolio Section Dark Mode */
+[data-theme="dark"] .project-card {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .project-card:hover {
+    border-color: var(--primary-green);
+    box-shadow: 0 8px 30px rgba(34, 139, 34, 0.3);
+}
+
+[data-theme="dark"] .project-title {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .project-description {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .tech-tag {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-secondary);
+    border: 1px solid var(--dark-border);
+}
+
+/* About Section Dark Mode */
+[data-theme="dark"] .about-description {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .stat-label {
+    color: var(--dark-text-muted);
+}
+
+/* Team Section Dark Mode */
+[data-theme="dark"] .team {
+    background-color: var(--dark-bg-secondary);
+}
+
+[data-theme="dark"] .team-card {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .team-card:hover {
+    border-color: var(--primary-green);
+    box-shadow: 0 8px 30px rgba(34, 139, 34, 0.3);
+}
+
+[data-theme="dark"] .team-name {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .team-bio {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .social-link {
+    color: var(--dark-text-muted);
+}
+
+[data-theme="dark"] .social-link:hover {
+    color: var(--primary-green);
+}
+
+/* Testimonials Dark Mode */
+[data-theme="dark"] .testimonial-card {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .testimonial-text {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .testimonial-author {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .testimonial-position {
+    color: var(--primary-green);
+}
+
+/* Contact Section Dark Mode */
+[data-theme="dark"] .contact {
+    background-color: var(--dark-bg-secondary);
+}
+
+[data-theme="dark"] .contact-form {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    background-color: var(--dark-bg-primary);
+    border-color: var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group textarea:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 2px rgba(34, 139, 34, 0.2);
+}
+
+[data-theme="dark"] .form-group input::placeholder,
+[data-theme="dark"] .form-group textarea::placeholder {
+    color: var(--dark-text-muted);
+}
+
+[data-theme="dark"] .contact-details h4 {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .contact-details p {
+    color: var(--dark-text-secondary);
+}
+
+/* Footer Dark Mode */
+[data-theme="dark"] .footer {
+    background-color: var(--dark-bg-primary);
+    border-top: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .footer-description,
+[data-theme="dark"] .footer-links a,
+[data-theme="dark"] .footer-contact p {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .footer-links a:hover {
+    color: var(--primary-green);
+}
+
+[data-theme="dark"] .footer-title {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .footer-bottom {
+    border-top-color: var(--dark-border);
+    color: var(--dark-text-muted);
+}
+
+/* Section Headers Dark Mode */
+[data-theme="dark"] .section-title {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .section-description {
+    color: var(--dark-text-secondary);
+}
+
+/* Button Dark Mode Adjustments */
+[data-theme="dark"] .btn-outline {
+    color: var(--dark-text-primary);
+    border-color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background-color: var(--dark-text-primary);
+    color: var(--dark-bg-primary);
+}
+
+/* Smooth Transitions for Theme Switch */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Mobile Dark Mode Toggle */
+@media screen and (max-width: 768px) {
+    .dark-mode-toggle {
+        top: 80px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+
+/* Spline Effect - Animated Background Elements */
+.spline-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.spline-curve {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-green), var(--primary-yellow));
+    animation: float 6s ease-in-out infinite;
+}
+
+.spline-curve:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.spline-curve:nth-child(2) {
+    top: 60%;
+    right: 10%;
+    animation-delay: 2s;
+    background: linear-gradient(45deg, var(--primary-yellow), var(--primary-red));
+}
+
+.spline-curve:nth-child(3) {
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+    background: linear-gradient(45deg, var(--primary-red), var(--primary-green));
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-20px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(-40px) rotate(180deg);
+    }
+    75% {
+        transform: translateY(-20px) rotate(270deg);
+    }
+}
+
+[data-theme="dark"] .spline-curve {
+    opacity: 0.2;
+}
+
+/* Enhanced Hover Effects */
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .team-card {
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .service-card:hover,
+[data-theme="dark"] .project-card:hover,
+[data-theme="dark"] .team-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Glowing Effects for Dark Mode */
+[data-theme="dark"] .btn-primary {
+    box-shadow: 0 0 20px rgba(34, 139, 34, 0.3);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(34, 139, 34, 0.5);
+}
+
+[data-theme="dark"] .contact-icon {
+    box-shadow: 0 0 15px rgba(34, 139, 34, 0.4);
+}
+
+[data-theme="dark"] .social-links .social-link {
+    box-shadow: 0 0 10px rgba(34, 139, 34, 0.3);
+}
+
+[data-theme="dark"] .social-links .social-link:hover {
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.5);
+}
+
